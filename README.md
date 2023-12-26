@@ -17,29 +17,28 @@ tamara@tamara-linux:~$ cat 'Домашние животные' 'Вьючные �
 Просмотреть содержимое созданного файла. 
 tamara@tamara-linux:~$ cat 'Все животные' Переименовать файл, дав ему новое имя (Друзья человека).
 tamara@tamara-linux:~$ mv 'Все животные' 'Друзья человека'
+
 ![1](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/94a07632-dfcb-4ff0-90c0-998c3d945df8)
 
 2.	Создать директорию, переместить файл туда.
  tamara@tamara-linux:~$ mkdir final  tamara@tamara-linux:~$ mv 'Друзья человека' final 
- 
-
+![2](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/07508877-f8e4-47d3-b556-a798f3c3902e)
 
 3.	Подключить дополнительный репозиторий MySQL. Установить любой пакет из этого репозитория.
-tamara@tamara-linux:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb  tamara@tamara-linux:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb  tamara@tamara-linux:~$ sudo apt-get update  tamara@tamara-linux:~$ sudo apt-get install mysql-server  tamara@tamara-linux:~$ systemctl status mysql   
- 
+tamara@tamara-linux:~$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb  tamara@tamara-linux:~$ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb  tamara@tamara-linux:~$ sudo apt-get update  tamara@tamara-linux:~$ sudo apt-get install mysql-server  tamara@tamara-linux:~$ systemctl status mysql
+![3](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/c302a35d-2576-4dc6-9b04-0000ffc84dac)
+![4](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/1735be58-22aa-45b7-892f-73150dac2358)
+
 4.	Установить и удалить deb-пакет с помощью dpkg.
 tamara@tamara-linux:~$ wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j_8.0.32-1ubuntu22.04_all.deb  tamara@tamara-linux:~$ sudo dpkg -i mysql-connector-j_8.0.32-1ubuntu22.04_all.deb tamara@tamara-linux:~$ sudo dpkg -r mysql-connector-j 
- 
- 
+![5](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/f9847a0c-c0d1-4b65-9431-d477cb4af964)
 
- 
-
+![6](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/d9ce5aac-5df3-4dbb-b5cb-f398661f8d53)
 5.	Выложить историю команд в терминале ubuntu
- 
+![7](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/b387865c-161c-4e03-a602-7257f0f91488)
 
 6.	Нарисовать диаграмму, в которой есть класс родительский класс, домашние животные и вьючные животные, в составы которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючные животные войдут: Лошади, верблюды и ослы).
-
- 
+![8](https://github.com/TomaNovickaya/Final-control-work-on-the-specialization-block/assets/126395023/f52c1d02-73d3-4222-8bc8-6783aef103bb)
 
 7.	В подключенном MySQL репозитории создать базу данных “Друзья человека”
 CREATE DATABASE  human_friends;
@@ -130,3 +129,5 @@ CREATE TABLE `human_friends`.`young_animals` (
 SELECT *FROM cats WHERE datebirth <= '2022-12-26' AND datebirth >= '2020-12-26';
 12.	Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.
 SELECT *FROM cats, dogs, hamsters, horses CROSS JOIN young_animals;
+
+
